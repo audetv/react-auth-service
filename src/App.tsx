@@ -9,16 +9,16 @@ import Register from './pages/Register';
 function App() {
   return (
       <div className="App">
-        <Nav />
-        <main className="form-signin w-100 m-auto">
-          <BrowserRouter>
+        <BrowserRouter>
+          <Nav />
+          <main className="form-signin w-100 m-auto">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
             </Routes>
-          </BrowserRouter>
-        </main>
+          </main>
+        </BrowserRouter>
       </div>
   );
 }
