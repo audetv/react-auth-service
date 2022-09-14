@@ -18,7 +18,7 @@ function App() {
           })
 
           const content = await response.json()
-          setName(content.name)
+          setName(content.name || '');
         }
     )();
   })
@@ -26,7 +26,7 @@ function App() {
   return (
       <div className="App">
         <BrowserRouter>
-          <Nav />
+          <Nav name={name} />
           <main className="form-signin w-100 m-auto">
             <Routes>
               <Route path="/" element={<Home name={name} />} />
